@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>HandsFree Pet — setup</title>
+<style>
+body { background:#111827; color:#f9fafb; font:18px/1.5 system-ui; max-width:640px; margin:48px auto; padding:0 20px; }
+button { font:inherit; font-size:22px; padding:16px 24px; border-radius:12px; border:2px solid #4ade80; background:#166534; color:#fff; cursor:pointer; }
+code { background:#1f2937; padding:2px 6px; border-radius:4px; }
+#msg { color:#fde68a; min-height:1.5em; margin-top:16px; }
+</style></head>
+<body>
+<h1>🦃 HandsFree Pet — one-time setup</h1>
+<p>Chrome needs you to allow the camera once for this extension. Click the button, then choose <b>Allow</b>.</p>
+<p><button id="go">Allow camera + microphone</button></p>
+<p id="msg"></p>
+<p>Then click the 🦃 toolbar icon (puzzle-piece menu → pin it) to switch the pet on. The pet's voice typing asks for the microphone once per website, the first time you use it there.</p>
+<p><small>If the pet says "assets missing", run <code>get-assets.sh</code> (Mac/Linux) or <code>get-assets.ps1</code> (Windows) in the extension folder, then reload the extension.</small></p>
+<script src="setup.js"></script>
+</body></html>

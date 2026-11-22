@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "HandsFree Pet",
+  "version": "0.2.0",
+  "description": "A desktop-pet style hands-free controller: head cursor, pinch to click, gesture zoom/scroll, and voice typing into any text box (including Google Docs).",
+  "minimum_chrome_version": "116",
+  "permissions": ["offscreen", "storage", "debugger", "scripting", "downloads", "alarms", "tts"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Toggle HandsFree Pet" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["shared.js", "content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}
